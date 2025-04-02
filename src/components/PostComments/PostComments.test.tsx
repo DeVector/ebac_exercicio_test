@@ -7,4 +7,23 @@ describe('Teste para o componente PostComment', () => {
         render(<PostComment/>);
         expect(screen.getByText('Comentar')).toBeInTheDocument();
     });
+    test('Devera criar dois novos comentarios', () => {
+        render(<PostComment />)
+
+        fireEvent.change(screen.getByTestId('campo-comentario'),{
+            target: {
+                value: 'Carro incrivel'
+            }
+        })
+        fireEvent.click(screen.getByTestId('btn-adicionar-comentario'))
+
+        fireEvent.change(screen.getByTestId('campo-comentario'), {
+            target: {
+                valua: 'Olha essa nave, vou ter uma igual a essa como Dev Full-stack'
+            }
+        })
+        fireEvent.click(screen.getByTestId('btn-adicionar-comentario'))
+        
+        expect(screen.getByText('Carro incrivel')).toBeInTheDocument()
+    })
 });

@@ -12,4 +12,5 @@
 O arquivo onde o teste deve ser escrito está em src/components/PostComments/PostComments.test.tsx
 
 ## Resolução
-Neste repositório existe uma branch chamada **resolucao** com o exercício resolvido, é importante que a utilize como consulta caso tenha dificuldades ou até mesmo para comparar com a abordagem que você adotou, **não faça simplesmente um copiar/colar** - confio em você ;)
+Foi feita uma resolução de acordo com o que foi aprendido, utilizando fireEvent para disparar eventos para conectar com o campo que se pede para simular um usuario digitando e
+clicando. Foi feito também com o getByTextId para pegar um campo em expecifico atráves do data-textid.
